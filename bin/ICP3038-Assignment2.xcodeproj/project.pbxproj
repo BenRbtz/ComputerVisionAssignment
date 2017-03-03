@@ -1,0 +1,898 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		28D1AA681EDB47A981C5378C /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3E5A437EF1AA420EB9751B11 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				A13C8FA4E42947A79A081D26 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		9342C09EB27B4B9D816A49D0 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 703E67E2265343F881FCEFCF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				AFDF4DC4EA33446896262ADC /* CMake Rules */,
+			);
+			dependencies = (
+				2053417B00EF467FA1C886C9 /* PBXTargetDependency */,
+				7FF65894791F45FE95DC707A /* PBXTargetDependency */,
+				F4D4449421864618BF917A08 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0DD144710C584362A22753DC /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = AA6D6C55954E4B37A35C1EB9 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		17A6D44780EC4E4ABB6943F6 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/Image.h */ = {isa = PBXBuildFile; fileRef = 9189B8A751F5456CB53262C1 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/Image.h */; settings = {COMPILER_FLAGS = ""; }; };
+		2E0D146F693F471C99402DC2 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 0428DB9F9433440787064315 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */; settings = {COMPILER_FLAGS = ""; }; };
+		45A1B0F490F9433EB1D639AB /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */ = {isa = PBXBuildFile; fileRef = BDB4DA48D15447F29CEB0689 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		6071900DE70E432995204F00 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment2.cpp */ = {isa = PBXBuildFile; fileRef = 5B778BB2918F436DBD863CC3 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment2.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		988BD314A2FE44C6825B2188 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */ = {isa = PBXBuildFile; fileRef = C63DA2CB7FC9457783309848 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		AF5CC502B40F4CBD8978EC7F /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/Image.h */ = {isa = PBXBuildFile; fileRef = 0F4FBC31DB2F4EDC8B5ACA7A /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/Image.h */; settings = {COMPILER_FLAGS = ""; }; };
+		DF5720F6D861418D9A805405 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/test_assignment2.h */ = {isa = PBXBuildFile; fileRef = 741D813954FA4E2BB5180F21 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/test_assignment2.h */; settings = {COMPILER_FLAGS = ""; }; };
+		F5C22C0CBEC545168347A142 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment.cpp */ = {isa = PBXBuildFile; fileRef = E83D130B73114D578D901B38 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		05CBC59DC1B24D91B895DBD8 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		0E4C6DE0D2D9414CB5797CA0 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		53F9FB277BD04909A10B66D7 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		888C187B973E436DB2AAF46E = {
+			isa = PBXBuildStyle;
+		};
+		B8D3C1A23B574290B6803CD4 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		18C9B38030F74DCE8F564B98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D6732F8858040E6A60F17E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28D1AA681EDB47A981C5378C;
+			remoteInfo = ZERO_CHECK;
+		};
+		2324224E51D74F219AFF403B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D6732F8858040E6A60F17E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28D1AA681EDB47A981C5378C;
+			remoteInfo = ZERO_CHECK;
+		};
+		6E3C40B0DA4049CFBED6F357 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D6732F8858040E6A60F17E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62CC75378C7C42A09C41123C;
+			remoteInfo = assignment2;
+		};
+		9C12772DD5FF4B72AF5EDC34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D6732F8858040E6A60F17E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5A875A069704B72884EBADC;
+			remoteInfo = assignment1;
+		};
+		E6F5BA5EDA6B4F2DA28DDDE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D6732F8858040E6A60F17E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28D1AA681EDB47A981C5378C;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0428DB9F9433440787064315 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0F4FBC31DB2F4EDC8B5ACA7A /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/Image.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Image.h; path = include/Image.h; sourceTree = SOURCE_ROOT; };
+		4B9F8AB3FBF24B15B8D8E44A /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		5B778BB2918F436DBD863CC3 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_assignment2.cpp; path = src/test_assignment2.cpp; sourceTree = SOURCE_ROOT; };
+		741D813954FA4E2BB5180F21 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/test_assignment2.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = test_assignment2.h; path = include/test_assignment2.h; sourceTree = SOURCE_ROOT; };
+		9189B8A751F5456CB53262C1 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/Image.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Image.h; path = include/Image.h; sourceTree = SOURCE_ROOT; };
+		AA6D6C55954E4B37A35C1EB9 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		BDB4DA48D15447F29CEB0689 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Image.cpp; path = src/Image.cpp; sourceTree = SOURCE_ROOT; };
+		C63DA2CB7FC9457783309848 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Image.cpp; path = src/Image.cpp; sourceTree = SOURCE_ROOT; };
+		C8133B96E7F2420FBD47A65D /* assignment2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = assignment2; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83D130B73114D578D901B38 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = test_assignment.cpp; path = src/test_assignment.cpp; sourceTree = SOURCE_ROOT; };
+		EF9B4B23DC744047BE1F9D8E /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FB9E2929D4254A099250BC6D /* assignment1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = assignment1; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		06A9B4A355EC47408152619C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		107972A04B334E1BB2386B97 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C63DA2CB7FC9457783309848 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */,
+				E83D130B73114D578D901B38 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		15F59EBA25BC47C780FD3BB3 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				CC36F272F5E642C5B21CB3EF /* CMake Rules */,
+				EF9B4B23DC744047BE1F9D8E /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		1D9FC370BA404998BE9B95E7 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDB4DA48D15447F29CEB0689 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */,
+				5B778BB2918F436DBD863CC3 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment2.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		405A2FF3AE984C17BEDC1555 /* assignment1 */ = {
+			isa = PBXGroup;
+			children = (
+				FEE86B30396F45A58D9E30C0 /* Header Files */,
+				107972A04B334E1BB2386B97 /* Source Files */,
+				0428DB9F9433440787064315 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */,
+			);
+			name = assignment1;
+			sourceTree = "<group>";
+		};
+		6BCBE978422E47029F106E38 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		6DE737265D8F498DA78DCB3A = {
+			isa = PBXGroup;
+			children = (
+				CFFB9686177649CDB8A6EB9E /* Sources */,
+				06A9B4A355EC47408152619C /* Resources */,
+				774ECD445DA54F7D85928487 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		774ECD445DA54F7D85928487 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E2929D4254A099250BC6D /* assignment1 */,
+				C8133B96E7F2420FBD47A65D /* assignment2 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B83D77C7C7484DABA97EB687 /* assignment2 */ = {
+			isa = PBXGroup;
+			children = (
+				C2F3C2BE6A314D8EB35FD50B /* Header Files */,
+				1D9FC370BA404998BE9B95E7 /* Source Files */,
+				AA6D6C55954E4B37A35C1EB9 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */,
+			);
+			name = assignment2;
+			sourceTree = "<group>";
+		};
+		C2F3C2BE6A314D8EB35FD50B /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F4FBC31DB2F4EDC8B5ACA7A /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/Image.h */,
+				741D813954FA4E2BB5180F21 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/test_assignment2.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		CC36F272F5E642C5B21CB3EF /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		CFFB9686177649CDB8A6EB9E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				405A2FF3AE984C17BEDC1555 /* assignment1 */,
+				B83D77C7C7484DABA97EB687 /* assignment2 */,
+				E1527C5509CF49BC96F3A4D5 /* ALL_BUILD */,
+				15F59EBA25BC47C780FD3BB3 /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		E1527C5509CF49BC96F3A4D5 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				6BCBE978422E47029F106E38 /* CMake Rules */,
+				4B9F8AB3FBF24B15B8D8E44A /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		FEE86B30396F45A58D9E30C0 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				9189B8A751F5456CB53262C1 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include/Image.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62CC75378C7C42A09C41123C /* assignment2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4DDEAAAE52469F870FA34D /* Build configuration list for PBXNativeTarget "assignment2" */;
+			buildPhases = (
+				9B70A7A2ADF04B7FBEE39448 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF8A9BD6A81346359AC2DCEF /* PBXTargetDependency */,
+			);
+			name = assignment2;
+			productName = assignment2;
+			productReference = C8133B96E7F2420FBD47A65D /* assignment2 */;
+			productType = "com.apple.product-type.tool";
+		};
+		B5A875A069704B72884EBADC /* assignment1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB94C7F4A6E74CEDB958541E /* Build configuration list for PBXNativeTarget "assignment1" */;
+			buildPhases = (
+				6A940EC68E1C49799591F799 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28B4C7E850E543369A99F46E /* PBXTargetDependency */,
+			);
+			name = assignment1;
+			productName = assignment1;
+			productReference = FB9E2929D4254A099250BC6D /* assignment1 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D6732F8858040E6A60F17E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0810;
+			};
+			buildConfigurationList = 756496AD19AA48859FA72D8F /* Build configuration list for PBXProject "ICP3038-Assignment2" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				05CBC59DC1B24D91B895DBD8 /* Debug */,
+				0E4C6DE0D2D9414CB5797CA0 /* Release */,
+				53F9FB277BD04909A10B66D7 /* MinSizeRel */,
+				B8D3C1A23B574290B6803CD4 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 6DE737265D8F498DA78DCB3A;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				9342C09EB27B4B9D816A49D0 /* ALL_BUILD */,
+				28D1AA681EDB47A981C5378C /* ZERO_CHECK */,
+				B5A875A069704B72884EBADC /* assignment1 */,
+				62CC75378C7C42A09C41123C /* assignment2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8C26CEE34B094018B0FC9AEC = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A13C8FA4E42947A79A081D26 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/Ben/Dropbox/CS/Year\\ 3/Semester\\ 1/ICP\\ 3038/Assignments/Assignment2/bin -f /Users/Ben/Dropbox/CS/Year\\ 3/Semester\\ 1/ICP\\ 3038/Assignments/Assignment2/bin/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		AFDF4DC4EA33446896262ADC /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/Ben/Dropbox/CS/Year\\ 3/Semester\\ 1/ICP\\ 3038/Assignments/Assignment2/bin -f /Users/Ben/Dropbox/CS/Year\\ 3/Semester\\ 1/ICP\\ 3038/Assignments/Assignment2/bin/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		FC10BB0D9563466E8B56FC35 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A940EC68E1C49799591F799 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				988BD314A2FE44C6825B2188 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */,
+				F5C22C0CBEC545168347A142 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B70A7A2ADF04B7FBEE39448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45A1B0F490F9433EB1D639AB /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/Image.cpp */,
+				6071900DE70E432995204F00 /* /Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/src/test_assignment2.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2053417B00EF467FA1C886C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28D1AA681EDB47A981C5378C /* ZERO_CHECK */;
+			targetProxy = 18C9B38030F74DCE8F564B98 /* PBXContainerItemProxy */;
+		};
+		28B4C7E850E543369A99F46E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28D1AA681EDB47A981C5378C /* ZERO_CHECK */;
+			targetProxy = E6F5BA5EDA6B4F2DA28DDDE8 /* PBXContainerItemProxy */;
+		};
+		7FF65894791F45FE95DC707A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5A875A069704B72884EBADC /* assignment1 */;
+			targetProxy = 9C12772DD5FF4B72AF5EDC34 /* PBXContainerItemProxy */;
+		};
+		BF8A9BD6A81346359AC2DCEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28D1AA681EDB47A981C5378C /* ZERO_CHECK */;
+			targetProxy = 2324224E51D74F219AFF403B /* PBXContainerItemProxy */;
+		};
+		F4D4449421864618BF917A08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62CC75378C7C42A09C41123C /* assignment2 */;
+			targetProxy = 6E3C40B0DA4049CFBED6F357 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		038DE43E3BCF4C8A84788D27 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1665BF346E54411FAD96209B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assignment2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		1B16AC3400D1468C98AA6ED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		2724FA00D70D460E870DF76F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin/build";
+			};
+			name = Release;
+		};
+		2D7BEA3A491C4C9790CEBCA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assignment2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		33E16BFA0EA84DE4B4416B1B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin/build";
+			};
+			name = RelWithDebInfo;
+		};
+		4142F50DE29A4096A694E397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin/build";
+			};
+			name = Debug;
+		};
+		455C8D6CDE6F498A97B2120A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assignment1;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		49BD4652C06647CBB9AE6F40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		4CD490D0C3EA4BBA9FD39549 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assignment1;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		76FB9EBB3ABE410F979398CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assignment1;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		92518F1FED4A4121985AD243 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9D8F4E75E16B45308F36867C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B2D74DDE8E7642ACBB92D94F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assignment1;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		BD906451E63B4EAEB4ADC3DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		CEB9610A80164E84B47675AF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assignment2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DBFCC11EDD054F69B8FA807A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = assignment2;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		ED8409843BB345A3A433232C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin/build";
+			};
+			name = MinSizeRel;
+		};
+		F20E13454EB94B24B74483AF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F7E76BBCEA8A4DC0AC1E4114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/include\"");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/Ben/Dropbox/CS/Year 3/Semester 1/ICP 3038/Assignments/Assignment2/bin";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B4DDEAAAE52469F870FA34D /* Build configuration list for PBXNativeTarget "assignment2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D7BEA3A491C4C9790CEBCA9 /* Debug */,
+				1665BF346E54411FAD96209B /* Release */,
+				DBFCC11EDD054F69B8FA807A /* MinSizeRel */,
+				CEB9610A80164E84B47675AF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3E5A437EF1AA420EB9751B11 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B16AC3400D1468C98AA6ED1 /* Debug */,
+				F7E76BBCEA8A4DC0AC1E4114 /* Release */,
+				9D8F4E75E16B45308F36867C /* MinSizeRel */,
+				F20E13454EB94B24B74483AF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		703E67E2265343F881FCEFCF /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD906451E63B4EAEB4ADC3DC /* Debug */,
+				49BD4652C06647CBB9AE6F40 /* Release */,
+				038DE43E3BCF4C8A84788D27 /* MinSizeRel */,
+				92518F1FED4A4121985AD243 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		756496AD19AA48859FA72D8F /* Build configuration list for PBXProject "ICP3038-Assignment2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4142F50DE29A4096A694E397 /* Debug */,
+				2724FA00D70D460E870DF76F /* Release */,
+				ED8409843BB345A3A433232C /* MinSizeRel */,
+				33E16BFA0EA84DE4B4416B1B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EB94C7F4A6E74CEDB958541E /* Build configuration list for PBXNativeTarget "assignment1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2D74DDE8E7642ACBB92D94F /* Debug */,
+				76FB9EBB3ABE410F979398CA /* Release */,
+				455C8D6CDE6F498A97B2120A /* MinSizeRel */,
+				4CD490D0C3EA4BBA9FD39549 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D6732F8858040E6A60F17E7 /* Project object */;
+}

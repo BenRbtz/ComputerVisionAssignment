@@ -1,0 +1,477 @@
+\def\DEADLINE{Thursday 5th November 2015 (midnight)}
+\def\MODULENUMBER{ICP3038}
+\def\MODULETITLE{Computer Vision}
+\def\MODULECREDIT{20}
+\def\ASSIGNMENTWEIGHT{10}
+\def\ASSIGNMENTNUMBER{1}
+\def\LECTURER{Dr Franck P. Vidal}
+
+\documentclass[10pt]{article}
+\usepackage[margin=2.cm]{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx,wrapfig}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\usepackage[none]{hyphenat}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{slashbox}
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+
+\usepackage{listings}
+
+\lstset{
+    frame=single,
+    breaklines=true,
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}
+}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyhead[L]{\MODULENUMBER}
+\fancyhead[C]{Assignment \ASSIGNMENTNUMBER{} -- \MODULETITLE}
+\fancyhead[R]{Page \thepage\ of \pageref{LastPage}}
+
+\title{Assignment~1 ({\ASSIGNMENTWEIGHT}\%)}
+\author{\MODULENUMBER}
+\date{Deadline: \DEADLINE}                                           % Activate to display a given date or no date
+
+\begin{document}
+
+\thispagestyle{fancy}
+
+{\begin{wrapfigure}[1]{R}{3cm}
+\vspace{-5mm}
+\includegraphics[width=2.5cm]{logo.jpg}
+\end{wrapfigure}
+
+
+%\maketitle
+%\section*{}
+%\section*{}
+\noindent
+\begin{tabular}{|ll|}
+\hline
+Module:			&	{\MODULENUMBER} -- \MODULETITLE \\
+Department:		&	School of Computer Science \\
+Module credit:	&	\MODULECREDIT \\ 
+Organiser:		&	\LECTURER \\
+Assignment weight:		&	\ASSIGNMENTWEIGHT\% \\
+Assignment deadline:		&	\DEADLINE \\
+\hline
+\end{tabular}
+\\[2em]
+
+\noindent\huge\textbf{Assessment {\ASSIGNMENTNUMBER} -- My own Image class in C++}
+}
+
+\section*{Description}
+%A brief description of the assessment. It could include some background information. E.g., the scenario that the student will be working on; or the type of work that they will be doing.
+
+In this assignment, you will implement and test a C++ class to handle a 2D image. 
+It is necessary to provide a good implementation of this class before coding any image processing. 
+The implementation will be focusing on greyscale images stored as 1D arrays of single precision floating point numbers. 
+The main reason is that it is the most versatile data type to store and manipulate pixel values. 
+We provide a ZIP file that includes an initial skeleton (\verb+Image.h+, \verb+Image.cpp+, and \verb+test.cpp+) and a file for CMake. 
+You have to modify these files if needed to complete the assignment.
+
+%The class should contain:
+%Parallel programming is the main software part of High Performance Computing (HPC) (also called supercomputing). 
+%HPC global market is expected to reach {\pounds}25 billion by 2018. 
+%HPC is firmly linked to economic competitiveness as well as scientific advances. 
+%This is recognised by worldwide political leaders:
+%\begin{itemize}
+%\item In 2006, in the State of the Union, American President Bush called for spending in HPC technologies despite promises to trim the federal budget. 
+%\item In 2009, Russian President Medvedev pointed out that without more investment in HPC technologies ``Russian products will not be competitive or of interest to potential buyers''.
+%\end{itemize}
+%
+%It is becoming more and more difficult and expensive to produce faster and faster processors. 
+%The Moore's law is defined as follows:
+%\begin{center}\textit{The number of transistors on an integrated circuit doubles every two years.}\end{center}
+%It was predicted in 2010 that the Moore's law would slow down at the end of 2013, when the number of transistors would double every three years only.  
+%%
+%To address this, the HPC community has looked at combining the processing power of multiple CPUs to work on a single task. 
+%This is parallel computing: many calculations are performed simultaneously. 
+
+\section*{Contribution of this assessment}
+This assessment contributes to {\ASSIGNMENTWEIGHT}\% of the overall module mark.
+
+\section*{Tasks \& Requirements}
+
+The assignment is based on the implementation of a C++ class for handling greyscale images. 
+It should include:
+\begin{enumerate}
+\item \verb+Image()+; (default constructor)
+\item \verb+Image(const Image& anImage)+; (copy constructor)
+\item \verb+~Image()+; (destructor)
+\item \verb+Image& operator=(const Image& anImage)+; (assignment operator, also called copy operator)
+\item \verb!Image operator+(const Image& anImage)! (addition operator, pixelwise)
+\item \verb+Image operator-(const Image& anImage)+ (subtraction operator, pixelwise)
+\item \verb!Image& operator+=(const Image& anImage)! (addition assignment operator, pixelwise)
+\item \verb+Image& operator-=(const Image& anImage)+ (subtraction assignment operator, pixelwise)
+\item \verb!Image operator+(float aValue)! (addition operator, add aValue to every pixel)
+\item \verb+Image operator-(float aValue)+ (subtraction operator, subtract aValue to every pixel)
+\item \verb+Image operator*(float aValue)+ (multiplication operator, multiply every pixel by aValue)
+\item \verb+Image operator/(float aValue)+ (division operator, divide every pixel by aValue)
+\item \verb!Image& operator+=(float aValue)! (addition assignment operator, add aValue to every pixel)
+\item \verb+Image& operator-=(float aValue)+ (subtraction assignment operator, subtract aValue to every pixel)
+\item \verb+Image& operator*=(float aValue)+ (multiplication assignment operator, multiply every pixel by aValue)
+\item \verb+Image& operator/=(float aValue)+ (division assignment operator, divide every pixel by aValue)
+\item \verb+Image operator!()+; (negation operator, return the negative image)
+\item An accessor on the width of the image;
+\item An accessor on the height of the image;
+\item A method returning the aspect ratio;
+\item A method to set the value of a pixel given its horizontal and vertical indices;
+\item A method returning the value of a pixel given its horizontal and vertical indices;
+\item A method to read an image from a RAW file;
+\item A method to write an image from a RAW file;
+\item A method returning the smallest value in the image;
+\item A method returning the largest value in the image;
+\item A method normlising the image between 0 and 1; (you can call the \verb+shiftScaleFilter method+)
+\item A method returning a region of interest (ROI).
+\end{enumerate}
+
+
+\large{\textbf{Note:} The functionalities of the class have to be tested and validated in \verb+test.cpp+}. 
+
+%The library includes a few filters:
+%\begin{itemize}
+%\item \verb+void updateStats()+ to update statistics (min, max, mean, sigma, and variance).
+%
+%\item     \verb+double normalisedXCorrelation()+ to compute the normalised cross-correlation between two images. It provides a measure of similarity:
+%	\begin{itemize}
+%		\item -1 if the two images are fully anticorrelated;
+%		\item ~1 if the two images are perfectly correlated;
+%		\item ~0 if the two images are totally uncorrelated.
+%	\end{itemize}
+%
+%\item \verb+void shiftScaleFilter()+ to apply the shift-scale filter.
+%
+%\item \verb+void normaliseFilter()+ to normalise the image dynamic between 0.0 and 1.0. It makes use of \verb+shiftScaleFilter()+.
+%
+%\item \verb+void negativeFilter()+ to apply the negative filter.
+%
+%\item \verb+void logFilter()+ to apply the log filter.
+%\end{itemize}
+%Figure~\ref{fig:filters} shows the output of some of these filters. 
+
+%\begin{figure}[tbh]
+%\centering
+%\subfigure[\label{fig:original}Original RGB image (neige.jpg).]{\includegraphics[width=0.24\linewidth]{neige.jpg}}\hfill
+%\subfigure[\label{fig:normalise}Normalise filter on Fig.~\ref{fig:original}.]{\includegraphics[width=0.24\linewidth]{normalise_image.jpg}}\hfill
+%\subfigure[\label{fig:log}Log filter on Fig.~\ref{fig:normalise}.]{\includegraphics[width=0.24\linewidth]{log_image.jpg}}\hfill
+%\subfigure[\label{fig:negative}Negative filter on Fig.~\ref{fig:log}.]{\includegraphics[width=0.24\linewidth]{negative_image.jpg}}
+%\caption{\label{fig:filters}Illustration of the library functionalities.}
+%\end{figure}
+%
+%We provide the initial working -- but inefficient -- C++ class, \verb+Image+ (it is not parallelised). 
+%Additional classes are also provided:
+%\begin{itemize}
+%	\item \verb+PthreadImage+ makes use of the Pthread library.
+%	\item \verb+BoostImage+  makes use of the Boost Thread library.
+%	\item \verb+OpenMPImage+ makes use of OpenMP API.
+%	\item \verb+MPIImage+ makes use of the Message Passing Interface (MPI). 
+%\end{itemize}
+%
+%Some of the filters are already provided with their Pthread, Boost Thread, OpenMP and MPI implementations, some are not (see Tab.~\ref{tab:implementation}). 
+
+\subsection*{Task 1: Implementation}
+Your task is to complete the class to make sure every operator and methods are implemented. 
+%
+%\begin{table}[tbh]
+%\centering
+%\caption{\label{tab:implementation} Filter implementation: (+) marks filters that are already provided in their parallel form; (-) shows filters that you have to parallelise.}
+%\begin{small}
+%\begin{tabular}{|c|c|c|c|c|c|}
+%\hline
+%\cellcolor{gray!25}\backslashbox{Filter}{Implementation}	& \cellcolor{gray!25}Serial	& \cellcolor{gray!25}Pthread	& \cellcolor{gray!25}Boost	& \cellcolor{gray!25}OpenMP	& \cellcolor{gray!25}MPI \\
+%\hline\hline
+%\cellcolor{gray!25}updateStats								&	+		&		+	&	+	&		+	&	+	\\\hline
+%\cellcolor{gray!25}normalisedXCorrelation					&	+		&		-	&	-	&		-	&	-	\\\hline
+%\cellcolor{gray!25}shiftScaleFilter							&	+		&		+	&	-	&		+	&	+	\\\hline
+%\cellcolor{gray!25}negativeFilter							&	+		&		-	&	-	&		-	&	-	\\\hline
+%\cellcolor{gray!25}logFilter								&	+		&		+	&	+	&		+	&	+	\\\hline
+%\end{tabular}
+%\end{small}
+%\end{table}
+
+\subsection*{Task 2: Testing}
+
+The code has to be tested. 
+Evidence of the results of the test will be assessed. 
+%Provide evidence of the accuracy of your new filters. 
+%The file \verb+test.cpp+, which is already provided, computes the normalised cross-correlation between the output of the serial implementation of filters with their  parallel counterparts. 
+%Figure~\ref{fig:accuracy} shows the console output that can be generated by \verb+test.cpp+. 
+%%\provide a summary with your own implementation
+%Provide similar information for your own implementation. 
+%
+%%\begin{figure}[tbh]
+%%\centering
+%%\includegraphics[width=0.75\linewidth]{accuracy.png}
+%%\caption{\label{fig:accuracy}Screenshot of the accuracy report given by \emph{test.cpp}.}
+%%\end{figure}
+
+%\subsection*{Task 3: Test performance}
+
+%Provide evidence of the performance of your parallel implementation. 
+%It can be done by timing both the original and improved versions. 
+%This is exactly what \verb+test.cpp+ does (see Figure~\ref{fig:performance1}).  
+%Provide similar information for your own implementation. 
+%
+%%\begin{figure}[tbh]
+%%\centering
+%%\includegraphics[width=\linewidth]{performance.png}
+%%\caption{\label{fig:performance1}Screenshot of the performance report given by \emph{test.cpp}.}
+%%\end{figure}
+%
+%Additionally, a Gnuplot script has been supplied to generate graphs that summarise the performance of each filter over $n$ iterations (see Listing~\ref{lst:Gnuplot}).  
+%\verb+test.cpp+ generates a CSV file that can be used as an input for the Gnuplot script. 
+%For example, the command line
+%\begin{center}\verb+./displayJpegImage +{\color{magenta}\verb+../src/neige.jpg+} {\color{red}\verb+8+} {\color{green}\verb+15+} {\color{blue}\verb+test.csv+}\end{center}
+%\noindent will use {\color{magenta}\verb+../src/neige.jpg+} as input. It will run a series of tests using the different implementations of the filters. 
+%It will save some of the outputs in JPEG files and it will create {\color{blue}\verb+test.csv+}. This file will contain the timing reports about {\color{green}\verb+15+} series of tests when {\color{red}\verb+8+} threads are used per parallel filter. 
+%Figure~\ref{fig:performance2} shows the graph generated using Listing~\ref{lst:Gnuplot} with the {\color{blue}\verb+test.csv+} file created on a laptop with Intel\textsuperscript{\textregistered} Core\textsuperscript{TM} i7-
+%3667U @ 2.00GHz $\times$ 4 processor. \\
+%
+%\begin{lstlisting}[language=Gnuplot,tabsize=2,basicstyle=\footnotesize,numbers=left,breaklines=true,captionpos=b,caption={Gnuplot script},label=lst:Gnuplot]
+%#!/usr/bin/gnuplot
+%
+%set terminal postscript enhanced eps color solid font "Times,16" fontscale 0.5 size  7,3
+%
+%
+%set boxwidth 0.5 absolute
+%set style data boxplot
+%set style boxplot candles range  1.50 outliers pt 0 separation 1 labels auto sorted
+%
+%set border 2 front linecolor -1 linewidth -1
+%set style fill solid 0.25 border lt -1
+%set pointsize 0.5
+%
+%set xtics border in scale 0,0 nomirror rotate by -45 autojustify
+%set xtics  norangelimit
+%set ytics border in scale 1,0.5 nomirror norotate  autojustify
+%set ylabel "Time (in seconds)"
+%
+%set grid
+%
+%set xtics ("Stats\n(no thread)"  1, \
+%           "Stats\n(8 Pthreads)" 2, \
+%           "Stats\n(8 Boost threads)" 3, \
+%           "Stats\n(8 OpenMP threads)" 4, \
+%           "Stats\n(8 MPI nodes)" 5, \
+%           "Correlation\n(no thread)"  6, \
+%           "Correlation\n(8 Pthreads)" 7, \
+%           "Correlation\n(8 Boost threads)" 8, \
+%           "Correlation\n(8 OpenMP threads)" 9, \
+%           "Correlation\n(8 MPI nodes)" 10, \
+%           "Normalise\n(no thread)"  11, \
+%           "Normalise\n(8 Pthreads)" 12, \
+%           "Normalise\n(8 Boost threads)" 13, \
+%           "Normalise\n(8 OpenMP threads)" 14, \
+%           "Normalise\n(8 MPI nodes)" 15, \
+%           "Log\n(no thread)"  16, \
+%           "Log\n(8 Pthreads)" 17, \
+%           "Log\n(8 Boost threads)" 18, \
+%           "Log\n(8 OpenMP threads)" 19, \
+%           "Log\n(8 MPI nodes)" 20, \
+%           "Negative\n(no thread)"  21, \
+%           "Negative\n(8 Pthreads)" 22, \
+%           "Negative\n(8 Boost threads)" 23, \
+%           "Negative\n(8 OpenMP threads)" 24, \
+%           "Negative\n(8 MPI nodes)" 25)
+%
+%
+%unset key
+%
+%set title "Performance on Apple Macbook Air with\nIntel(R) Core(TM) i7-3667U @ 2.00GHz x 4"
+%
+%#set yrange [0:0.3]
+%set output 'results-macbookair-mpi.eps'
+%set datafile separator ","
+%set datafile separator "\t"
+%plot for [i=1:25] 'test.csv' using (i):i
+%
+%reset
+%\end{lstlisting}
+%
+%\begin{figure}[tbh]
+%\centering
+%\includegraphics[width=\linewidth]{results-macbookair-mpi}
+%\caption{\label{fig:performance2}Performance report over 15 iterations.}
+%\end{figure}
+
+\subsection*{Task 3: Write a short report}
+
+Your final submissions should include the code and a report that discusses the changes you made to the code and the experiments showing that the code works. 
+Whenever possible, use pictures to illustrate your text. 
+At the end of your report, provide a critical analysis of your performance. \\
+In appendix of your report, join your own copy of
+\begin{itemize}
+\item\verb+Image.h+, \item\verb+Image.cpp+, and \item\verb+test.cpp+.
+\end{itemize}
+
+\noindent\textbf{Example of test and possible use of an illustration:} 
+To show that the ROI works, you can save the image that the method returns into a RAW file. 
+You can use ImageJ to display RAW files (see \url{http://imagej.nih.gov/ij/download.html}). 
+%You should discuss for what problems sizes parallelisation is effective. 
+%You should submit results showing speed-up factors. 
+%You should discuss the advantage/disadvantage of serial vs parallel implementation with Pthread, Boost, OpenMP and MPI. 
+%You should compare the different parallelization methods (inc.~speed, ease or difficulty to program, maintenance of the code, and scalability). 
+%
+%%and a gnuplot script to plot results is in \verb!plot/plotpart.plt!.
+%
+%
+%
+%%such by timing both the original and improved version. Experiments should include:
+%
+%%These represent contours (or isosurfaces) through a scalar field in 3D. 
+%%It is a relatively common methods for creating smooth 3D surfaces. 
+%%Figure~\ref{fig:2D slices} shows slices of such a scalar field. 
+%%It is built using 3~control points. 
+%
+%
+%
+%%A list of tasks that the student will perform. What they are expected to do? E.g., write a Java program that does X, and uses library Y, etc. Or a list of requirements.
+%Answer -- \textbf{in your own words}\,\footnote{no copy/paste from the slides or the Internet! The University is using a plagiarism-prevention service called Turnitin (\url{http://turnitin.com/}).} -- \textbf{any five} of the following questions:
+%
+%\begin{enumerate}
+%	\item What is an information system?
+%	\item Why is the study of information systems important?
+%	\item What are some of the ways information systems can improve our lives?
+%	\item What is the technology infrastructure of an organisation?
+%	\item What are some of the benefits organisations seek to achieve through using information systems?
+%	\item Define input, processing, output and feedback in relation to a real word example. 
+%	\item Identify the five steps in the system development process and state the goal for each.
+%	\item What are the main issues that need to be addressed by an Information System Project Manager?
+%\end{enumerate}
+%
+%To demonstrate your understanding you should \textbf{give details} and \textbf{include real world examples}.
+%The word limit is 1,500 words.
+%
+
+\section*{Submission procedure}
+%What the student is expected to submit; E.g a report, an essay in a Word document, or ZIP file of code, or PDF of their code, etc. Such as ÒEach student must submit a pdf of their report in the following format: username-ass2.pdfÓ. You need enough details here to make sure that they know what they are doing, and how they are going to get graded.
+Write your report in a Word document. 
+You must submit a .doc or .pdf file of your short report in the following format: ``username-ass\ASSIGNMENTNUMBER.pdf''. 
+In appendix, include your source code. 
+%\pthread boost openmp mpi
+
+The assignment is due on: \DEADLINE. 
+Submissions must be made via Blackboard. 
+Please take into account upload times and internet connections when considering how much time you have remaining. 
+
+\section*{Assessment method}
+
+Your report and your code will be marked. 
+In addition, you will be interviewed during the one of the two labs following the deadline. 
+
+Note that care will be given to details. 
+You are expected to use initialisation lists in constructors. 
+No memory leak is allowed. 
+Variable and function names should be meaningful. 
+An appropriate coding standard should be used consistently. 
+The code should compile without error. 
+The code should compile without warning if possible. 
+You should complete the header information at the top of each file.
+
+\section*{Plagiarism and Unfair Practice}
+
+Plagiarised work will be given a mark of zero. Remember when you submit you agree to the standard agreement:
+\begin{quotation}
+This piece of work is a result of my own work except where it is a group assignment for which approved collaboration has been granted. Material from the work of others (from a book, a journal or the Web) used in this assignment has been acknowledged and quotations and paraphrasing suitably indicated. I appreciate that to imply that such work is mine, could lead to a nil mark, failing the module or being excluded from the University.  I also testify that no substantial part of this work has been previously submitted for assessment.
+\end{quotation}
+
+\section*{Late Submission}
+Work submitted within one week of the stated deadline will be marked but the mark will be capped at 40\%. 
+A mark of 0\% will be awarded for any work submitted 1 week after the deadline. 
+
+Acceptable reasons for submitting work late include: Serious personal illness with a doctorÕs certificate (a self-certified medical note should not be accepted). The death of a relative or close friend. Serious family problems such as divorce, separation and eviction. 
+Examples of unacceptable reasons for failing to submit work on time include: Having exams; Having other work to do; Not having access to a computer; Having computer related problems; Being on holiday; Not being able to find information about a subject.
+
+\section*{Marking Scheme}
+Please remember that marks are provisional until they are confirmed by a board of examiners. \\
+
+%\subsection*{Details of how the mark will be calculated} % E.g., there are five parts to the task, each will be given equal weighting. An overall percentage value will be recorded on Blackboard for this assignment.
+%There are five question to answer, each will be given equal weighting. 
+%An overall percentage value will be recorded on Blackboard for this assignment.
+
+%\subsection*{Mark ranges}
+
+\begin{small}
+\begin{tabular}{|p{0.95\linewidth}|}
+\hline
+$>80$, exceptional C++ programming skills. 
+Clear demonstrable understanding use of C++ programming. 
+%Excellent design of the interface and the tool clearly demonstrates an exceptional understanding of OpenGL/JOGL. 
+Outstanding development of all the methods. 
+Superb use of coding standards and comments. 
+Overall an exceptional and well-designed test program that demonstrates the validity of every functionality. % that includes an exceptional and well thought through User Interface that provides good interaction capability. 
+The report is exceptional and provides a comprehensive and clear critical analysis of the work performed. 
+An exemplar solution that could be used to demonstrate good practice of parallel programming to colleagues. \\
+\hline
+$>70$, good implementation that demonstrates a good understanding of C++ programming. 
+The code works effectively and the test program is effective to check the validity of every functionality. 
+The code is written using coding standards. 
+The code is well commented. 
+The report is comprehensive and makes a good critical analysis of the work. 
+Overall a very good solution to this assignment. 
+A well-structured report is provided (including a good critical analysis of the work provided). \\
+%Overall a creative design and novel layout. 
+\hline
+$>60$, a good implementation that demonstrates a suitable understanding of C++ programming. 
+The code works effectively and the test checks the validity of most functionalities. 
+Coding standards are relatively well applied and there are some comments. 
+Some limitations may exist in the work, however a good attempt made, and although there may be some limitations with the program a comprehensive report (with an excellent and well critiqued section) is included. \\
+\hline
+%\end{tabular}
+%
+%\begin{tabular}{|p{0.95\linewidth}|}
+%\hline
+$> 50$, appropriate demonstration of the challenge. 
+%Some attempt has been made to use C++ programming.  with different techniques and compare the performance of the different implementations. 
+Maybe full functionality is not provided, however the student demonstrates that they understand the processes required to achieve the assignment and understand some of the challenges and some of C++ programming.%the issues in parallelising the filters. 
+Comments are sparse and the use of coding standards is approximate. 
+Even with these limitations the report is well presented, and their achievements are well criticised and discussed. 
+Limitations to the work are clearly presented in the report and the student clearly understands what they have achieved and the limitations thereof. 
+Overall, maybe some flaws, but a reasonable submission. \\
+\hline
+$>40$, threshold performance. Demonstrates some understanding of C++ programming and some idea of testing the class. Some attempt has been made over creating the Image class. The code is not well commented and the coding standards are not used appropriately. % parallel implementations and plotting the performance comparison in a suitable way. 
+The report discusses some of the issues, and provides a basic critique of the work submitted. \\
+\hline
+$<40$, below threshold performance, with little demonstration of knowledge of C++ programming. Little thought has been made over this assessment, and understanding is confused. \\
+\hline
+\end{tabular}
+\end{small}
+
+\section*{Feedback details}
+%A description of how feedback will be given, and when it will occur.  We encourage this is split clearly into sections to identify the type of feedback. Such as below:\\
+
+\begin{small}
+\begin{center}
+\begin{tabular}{|p{0.15\linewidth}|p{0.6\linewidth}|l|}
+\hline
+							& Description
+							& Timeframe \\
+\hline
+\hline
+Formative (On-going)		&	Verbal Feedback -- Verbal feedback will be available by request. 
+								It is suggested that you keep a written note of this feedback to aid in your personal development.
+							&	Instant \\
+\hline
+Summative (Post Assessment)	&	Written Feedback -- Written feedback will be made available through blackboard after an assignment is submitted. 
+								To access your written feedback see the comments section of your assignment submission.	
+							&	1-2 weeks \\
+\hline
+\end{tabular}
+\end{center}
+\end{small}
+%
+
+
+\end{document}  
