@@ -1,4 +1,4 @@
-# ComputerVisionAssignment
+# ComputerVisionFilters
 
 Computer Vision assignment in my 3rd year of University. 
 The assignment was written in C++ using CMake to compile.
